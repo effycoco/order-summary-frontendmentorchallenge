@@ -1,0 +1,132 @@
+:root {
+  box-sizing: border-box;
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  font-size: 16px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Red Hat Display", sans-serif;
+  background-image: url(./images/pattern-background-mobile.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: var(--pale-blue);
+  color: var(--desaturated-blue);
+}
+@media (min-width: 768px) {
+  body {
+    background-image: url(./images/pattern-background-desktop.svg);
+  }
+}
+main {
+  border-radius: 1em;
+  padding: 0;
+  width: 330px;
+  margin: 3em auto;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 3px 3px 5px hsl(224, 70%, 75%);
+  overflow: hidden;
+}
+.container {
+  padding: 2em;
+}
+.hero {
+  width: 100%;
+}
+h1 {
+  color: hsl(223, 47%, 23%);
+  font-size: 1.3rem;
+  margin-bottom: 1em;
+}
+p {
+  line-height: 1.6;
+}
+
+.plan {
+  background-color: var(--very-pale-blue);
+  border-radius: 0.5em;
+  margin: 2em 0;
+  display: flex;
+  padding: 0.8em;
+  align-items: center;
+  justify-content: space-between;
+}
+.plan article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+article div {
+  margin-left: 0.5em;
+}
+h4 {
+  color: var(--dark-blue);
+}
+.price {
+  font-size: 0.8rem;
+}
+
+.icon-music {
+  float: left;
+}
+button {
+  border: 0;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.change {
+  background-color: transparent;
+  color: var(--bright-blue);
+  text-decoration: underline;
+  font-size: 1.1em;
+}
+.change:hover {
+  color: hsla(245, 75%, 52%, 0.746);
+  text-decoration: none;
+}
+.pay {
+  border-radius: 0.5em;
+  /* box-shadow: ; */
+  background-color: var(--bright-blue);
+  color: hsl(225, 100%, 98%);
+  padding: 1em;
+  box-shadow: 3px 3px 7px var(--bright-blue);
+
+  font-size: large;
+  width: 100%;
+}
+.pay:hover {
+  background-color: hsla(245, 75%, 52%, 0.746);
+}
+.cancel {
+  margin-top: 1em;
+  font-size: 1.2em;
+  background-color: transparent;
+  color: var(--desaturated-blue);
+}
+.cancel:hover {
+  color: var(--dark-blue);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
